@@ -2,8 +2,6 @@ package controller;
 
 
 
-import dao.product.IProduct;
-import dao.product.ProductDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,10 +18,6 @@ public class DeleteProductServlet extends HomeServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String id = req.getParameter("id");
-		IProduct iProduct = new ProductDAO();
-		iProduct.delete(id);
 
-		resp.sendRedirect("/home");
 	}
 }
